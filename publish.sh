@@ -8,7 +8,7 @@ read -rsp "Map password: " PW; echo
 python3 build/inline.py
 printf %s "$PW" | node build/encrypt.js -
 unset PW
-git add index.html .gitignore README.md publish.sh build/encrypt.js build/inline.py
+git add index.html assets .gitignore README.md publish.sh build/encrypt.js build/inline.py
 git commit -m "Publish lead-to-cash map $(date +%Y-%m-%d)" || echo "(no changes to commit)"
 git push origin main
 echo "Live in about a minute: https://saascend-org.github.io/dxrcyber-lead-to-cash/"
